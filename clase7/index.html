@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Clase 7</title>
+</head>
+<body>
+	<div id="container">
+		<h1>Título</h1>
+		<ul class="list">
+			<li class="item">
+				Tea
+			</li>
+			<li class="item">
+				Coffee
+			</li>
+		</ul>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+		</p>
+		<select>
+			<option>Amarillo</option>
+			<option>Verde</option>
+			<option>Rojo</option>
+		</select>
+		<form >
+			<input type="name" name="nombre">
+			<textarea type="name" name="nombre"></textarea>	
+		</form>
+	</div>
+	
+	<a href="#" class="link" target="_blank"></a>
+	
+	<script type="text/javascript">
+		function getParentKnow(){
+			var a = document.getElementById("container").parentNode; //sirve para llamar algo por su id
+			console.log(a)
+		}
+		//getParentKnow()
+
+		function getChildKnow(){
+			var a = document.getElementById("container").childNodes;
+			console.log(a)
+		}
+		//getChildKnow()
+
+		function getFirstChild(){
+			var a = document.getElementById("container").firstElementChild; //"firstElementChild" llamo al primero por ID
+			console.log(a)
+		}
+		//getFirstChild()
+
+		function getLastChild(){
+			var a = document.getElementById("container").lastElementChild; // llamo al último por ID
+			console.log(a)
+		}
+		//getLastChild()
+
+		function getFirstSibling(){
+			var a = document.getElementsByClassName("list")[0].previousElementSibling; // "previousElementSibling" para llamar por clase // llamo el primero
+			console.log(a)			
+		}
+		//getFirstSibling()
+
+		function getLastSibling(){
+			var a = document.getElementsByClassName("list")[0].nextElementSibling; // así llamo al último
+			console.log(a)			
+		}
+		//getLastSibling()
+
+		/*-function addOption(){
+			var selector = document.querySelectorAll("select")
+			var option = document.createElement("option")
+			var contenido = document.createTextNode("Negro")
+			option.appendChild("contenido")
+			selector.appendChild("option")
+		}-*/
+	</script>
+</body>
+</html>

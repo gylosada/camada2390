@@ -1,28 +1,53 @@
-//LOS JUGADORES
-function CreaJugadores(nombre, vida, golpe, turno){
-	this.elnombre = nombre
-	this.lavida = vida
-	this.elgolpe = golpe
-	this.elturno = turno
-}
-
-var jug1 = new CreaJugadores("juan", 300, 5, true)
-var jug2 = new CreaJugadores("pedro", 150, 10, false)
-
-
-//LA FUNCIÓN DE ATAQUE
-var accionGolpear = function(vidaOp, golpeAtac){
-	var resto = 
-	console.log()
-	return vidaOp - golpeAtac
+//// CONSTRUCTOR DE JUGADORES
+function CreaJugadores (elnombre,lavida,elgolpe,elturno){
+	this.nombre = elnombre
+	this.vida = lavida
+	this.golpe = elgolpe
+	this.turno = elturno
 }
 
 
-//LOS TURNOS
+//// NOMBRE DE JUGADOR (por usuario)
+var nombreUsuario1 = prompt("Ingrese el nombre de su personaje", "Deadpool")
+var nombrePC= "Stan Lee"
 
-if(jug1.elturno === true){
-	jug2.vida = accionGolpear(jug2.vida, jug1.)	
+
+//// CREACIÓN DE JUGADORES
+var jugUsuario = new CreaJugadores(nombreUsuario1, 200, 10, true)
+var jugPC = new CreaJugadores(nombrePC, 200, 10, false)
+
+
+
+
+
+//// ATAQUES
+
+var accionGolpear = function(vidaOponente, golpe){
+	
 }
+
+
+//// GOLPES JUGADORES
+//var golpeRandom = Math.round(Math.random()*100)
+//var golpeFuerte = Math.round(Math.random()*100)
+
+
+
+//// ATAQUE DE JUGADORES
+
+
+
+
+//// RESULTADO PELEA
+
+
+
+
+
+
+
+
+
 
 
 
@@ -31,25 +56,18 @@ if(jug1.elturno === true){
 
 
 /*-
-//LOS ATAQUES
-var vidaRestanteJug2 = function ataque(vida2, golpe1){
-	return vida2 - golpe1
+var tipoDeGolpe = Number(prompt("Elija el tipo de golpe: RÁPIDO, CURVO, o MIXTO", "MIXTO")).toLowerCase()
+
+switch (tipoDeGolpeo){
+	case "rápido" :
+		Math.round(Math.random()*10);
+		break
+	case "curvo" :
+		Math.round(Math.random()*50);
+		break
+	case "mixto" :
+		Math.round(Math.random()*100);
+		break
 }
-var vidaRestanteJug1 = function ataque(vida1, golpe2){
-	return vida1 - golpe2
-}-*/
-
-//console.log(vidaRestanteJug1(jug2.lavida, jug1.elgolpe))
-//console.log(vidaRestanteJug2(jug1.lavida, jug2.elgolpe))
-
-
-
-
-do{
-	console.log(vidaRestanteJug2(jug2.lavida, jug1.elgolpe))
-	console.log(vidaRestanteJug1(jug1.lavida, jug2.elgolpe))
-	break
-}
-while(jug1.lavida > 145 || jug2.lavida > 145)
-
+-*/
 
