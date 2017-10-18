@@ -37,30 +37,41 @@ var subidorPelis = function (pelicula){
 		console.log("Esta película ya está subida")
 	}
 }
+//subidorPelis(6)
 
 
 
-
-//// ordeno las películas
-
-
+//// ordeno las películas 
+					//solo ordena por ID, no pude hacer que ordene por ambas cosas
+var ordenarPelis = function(arrAOrdenar){
+	arrAOrdenar.sort(function(a,b){
+			if(a.id > b.id){
+				return 1
+			} if(a.id < b.id){
+				-1
+			} else{
+				return 0
+			}
+		}
+	)
+	return arrAOrdenar
+}
+//ordenarPelis(peliculasSubidas)
 
 
 
 //// elimino pelicula por ID
-var eliminarPeli = function (id){
-	var indexAEliminar = -1
-	for(i=0; i<peliculasSubidas.length; i++){
-		if(peliculasSubidas[i].id === id){
-			indexAEliminar = i
+var eliminarPeli = function(idIngresado){
+	var peliNoEncontrada = true
+	for (i=0; i<peliculasSubidas.length; i++) {
+		if(peliculasSubidas[i].id === idIngresado){
+			peliNoEncontrada = false
+			peliculasSubidas.splice(i, 1)
+			console.log("Se eliminó la película " + peliculasSubidas[i].titulo)
 		}
 	}
-	if(indexAEliminar>=0){
-		console.log("Se ha eliminado " + peliculasSubidas[indexAEliminar].titulo)
-		peliculasSubidas.splice(indexAEliminar, 1)
-	} else{
+	if(peliNoEncontrada){
 		console.log("Esa película no está ingresada")
 	}
 }
-
 //eliminarPeli(2)
