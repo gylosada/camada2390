@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
-<body onload="mostrarTareaHecha()">
+<body onload="mostrarAutomatico()">
 	<header>
 		<div id="contenedor">
 			<h1>Listado de tareas</h1>
@@ -26,10 +26,15 @@
 				<input type="text" name="buscar" placeholder="Buscar tarea">
 				<input type="submit" name="buscar" id="buscar" value="Buscar">
 			</form>
-			<button id="mostrar">Mostrar Todo</button>
-			<button id="eliminarTodo">Eliminar Todo</button>
-			<button id="ordenarAZ">AZ</button>
-			<button id="ordenarZA">ZA</button>
+			<div id="btnMostrarEliminar">
+				<button id="mostrar">Mostrar Todo</button>
+				<button id="eliminarTodo">Eliminar Todo</button>
+			</div>
+
+			<div id="ordenarAmbos">
+				<button id="ordenarAZ">AZ</button>
+				<button id="ordenarZA">ZA</button>	
+			</div>
 		</div>
 
 		<div id="cajaTareas">
